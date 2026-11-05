@@ -1,0 +1,2608 @@
+{
+  "10": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP"
+    ]
+  },
+  "20": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP"
+    ]
+  },
+  "30": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player"
+    ]
+  },
+  "40": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP"
+    ]
+  },
+  "50": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player"
+    ]
+  },
+  "60": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP"
+    ]
+  },
+  "70": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP"
+    ]
+  },
+  "80": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player"
+    ]
+  },
+  "100": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player"
+    ]
+  },
+  "130": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "220": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "240": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer"
+    ]
+  },
+  "280": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "300": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer"
+    ]
+  },
+  "320": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player"
+    ]
+  },
+  "340": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "360": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player"
+    ]
+  },
+  "380": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "400": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "420": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "440": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer",
+      "Co-op"
+    ]
+  },
+  "500": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "PvP"
+    ]
+  },
+  "550": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op",
+      "PvP"
+    ]
+  },
+  "570": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "PvP",
+      "Online PvP"
+    ]
+  },
+  "620": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op",
+      "Shared/Split Screen"
+    ]
+  },
+  "630": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Online Co-op"
+    ]
+  },
+  "730": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer",
+      "PvP"
+    ]
+  },
+  "1002": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "1250": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op"
+    ]
+  },
+  "2520": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "2525": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "3050": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player"
+    ]
+  },
+  "4000": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer",
+      "Co-op"
+    ]
+  },
+  "6860": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "8930": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer"
+    ]
+  },
+  "9940": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "11230": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player"
+    ]
+  },
+  "16710": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "17410": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "17470": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "20900": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "20920": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "22370": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "22380": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "24240": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op"
+    ]
+  },
+  "24270": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "35140": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "38210": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player"
+    ]
+  },
+  "39140": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "40950": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP"
+    ]
+  },
+  "41000": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op"
+    ]
+  },
+  "41070": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op"
+    ]
+  },
+  "47890": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "48000": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "48700": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "49520": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op"
+    ]
+  },
+  "57200": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "72850": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "96000": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "105600": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "107410": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "PvP"
+    ]
+  },
+  "108600": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP"
+    ]
+  },
+  "201420": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "203140": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "203160": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player"
+    ]
+  },
+  "204360": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Shared/Split Screen"
+    ]
+  },
+  "205930": {
+    "is_multiplayer": false,
+    "categories": []
+  },
+  "209190": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "211820": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op"
+    ]
+  },
+  "214340": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "215510": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op",
+      "Shared/Split Screen"
+    ]
+  },
+  "217920": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player"
+    ]
+  },
+  "218620": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "220240": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op"
+    ]
+  },
+  "221100": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Co-op"
+    ]
+  },
+  "222880": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Cross-Platform Multiplayer"
+    ]
+  },
+  "227300": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Online Co-op"
+    ]
+  },
+  "230410": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "232750": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "236390": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP"
+    ]
+  },
+  "238430": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "239140": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "242760": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "242820": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "248710": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "249650": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "251570": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op",
+      "PvP"
+    ]
+  },
+  "252410": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "252490": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP",
+      "Co-op"
+    ]
+  },
+  "252630": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "252750": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "252950": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer",
+      "PvP"
+    ]
+  },
+  "253650": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "256190": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player"
+    ]
+  },
+  "263980": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "265590": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "265890": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "265970": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Shared/Split Screen"
+    ]
+  },
+  "266010": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "266210": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "269670": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Shared/Split Screen"
+    ]
+  },
+  "271590": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP",
+      "Co-op"
+    ]
+  },
+  "273500": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP",
+      "Shared/Split Screen PvP",
+      "Co-op",
+      "Online Co-op",
+      "Shared/Split Screen Co-op",
+      "Shared/Split Screen"
+    ]
+  },
+  "273770": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "274900": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP",
+      "Shared/Split Screen PvP",
+      "Co-op",
+      "Online Co-op",
+      "Shared/Split Screen Co-op",
+      "Shared/Split Screen",
+      "Cross-Platform Multiplayer"
+    ]
+  },
+  "275530": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "281920": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Shared/Split Screen PvP",
+      "Co-op",
+      "Shared/Split Screen Co-op",
+      "Shared/Split Screen"
+    ]
+  },
+  "281990": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer"
+    ]
+  },
+  "282800": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "287020": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "289070": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer"
+    ]
+  },
+  "291550": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Shared/Split Screen"
+    ]
+  },
+  "292030": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "294100": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "294140": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Shared/Split Screen PvP",
+      "Co-op",
+      "Shared/Split Screen Co-op",
+      "Shared/Split Screen"
+    ]
+  },
+  "294230": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "295250": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "295690": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Shared/Split Screen PvP",
+      "Co-op",
+      "Shared/Split Screen Co-op",
+      "Shared/Split Screen"
+    ]
+  },
+  "296870": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "299720": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op"
+    ]
+  },
+  "301190": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "301200": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "302320": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Shared/Split Screen"
+    ]
+  },
+  "304930": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "307230": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "308040": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "310560": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player"
+    ]
+  },
+  "311860": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "313830": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "314830": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "317250": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "322330": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "323720": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "325520": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "330450": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player"
+    ]
+  },
+  "331190": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "332480": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "332790": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "334690": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "340070": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "340300": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "340310": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "340320": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "341310": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "341820": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "343440": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer"
+    ]
+  },
+  "346110": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Co-op"
+    ]
+  },
+  "349460": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "351150": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "351470": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "352620": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Shared/Split Screen"
+    ]
+  },
+  "353550": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "354930": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "357070": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "359550": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP",
+      "Co-op"
+    ]
+  },
+  "361190": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "361350": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Shared/Split Screen PvP",
+      "Co-op",
+      "Shared/Split Screen Co-op",
+      "Shared/Split Screen"
+    ]
+  },
+  "363610": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "364910": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "365120": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Shared/Split Screen"
+    ]
+  },
+  "365420": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "366760": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP",
+      "Shared/Split Screen PvP",
+      "Shared/Split Screen",
+      "Cross-Platform Multiplayer"
+    ]
+  },
+  "367450": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "368710": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "369000": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "370510": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "371280": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "371420": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Shared/Split Screen"
+    ]
+  },
+  "373360": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "375460": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "377160": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "377310": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "377600": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "379720": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP"
+    ]
+  },
+  "380550": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "381210": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP",
+      "Co-op"
+    ]
+  },
+  "382140": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "385150": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "386360": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP"
+    ]
+  },
+  "386870": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "388080": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "391260": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "392820": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "394360": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer"
+    ]
+  },
+  "394680": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "394870": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "395160": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "395170": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "395250": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "395920": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "397500": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "398710": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Shared/Split Screen",
+      "Cross-Platform Multiplayer"
+    ]
+  },
+  "400510": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "400740": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "402040": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "402330": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "404080": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "405610": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "407230": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "407300": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "408110": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "410670": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "412370": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "413150": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op",
+      "Shared/Split Screen"
+    ]
+  },
+  "416080": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "416110": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "418070": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "420290": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "420740": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "429470": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "429490": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "431710": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "431840": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "433210": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player"
+    ]
+  },
+  "433850": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multiplayer (İsim Tespiti)"
+    ]
+  },
+  "433950": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "434530": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "434730": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "437170": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "438080": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Shared/Split Screen",
+      "Cross-Platform Multiplayer"
+    ]
+  },
+  "438180": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "438480": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "439250": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "439910": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer"
+    ]
+  },
+  "440760": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "442000": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "444220": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "444940": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "446640": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "447890": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "448000": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "448020": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "448070": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "448440": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "448510": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op",
+      "Shared/Split Screen"
+    ]
+  },
+  "448560": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "448780": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "449090": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "449220": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "449300": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "450060": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "450850": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "450860": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "453100": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer"
+    ]
+  },
+  "453820": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "453830": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "455710": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "456810": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "460960": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "461010": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Shared/Split Screen",
+      "Cross-Platform Multiplayer"
+    ]
+  },
+  "461640": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "462220": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "462960": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "463930": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "464230": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "467310": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "468320": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player"
+    ]
+  },
+  "468490": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "469730": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "469890": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "470270": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "473670": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "474050": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "474910": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "478010": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "485330": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "485370": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP"
+    ]
+  },
+  "485440": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "485450": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "485660": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "485730": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "485950": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "487220": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "487700": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "489830": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "489890": {
+    "is_multiplayer": false,
+    "categories": []
+  },
+  "489900": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "490820": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Shared/Split Screen"
+    ]
+  },
+  "491720": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "495540": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "496640": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "496650": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "498620": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "498660": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "499420": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "500580": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "500590": {
+    "is_multiplayer": false,
+    "categories": []
+  },
+  "501120": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "502910": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "507380": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "508170": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP",
+      "Shared/Split Screen PvP",
+      "Shared/Split Screen",
+      "Cross-Platform Multiplayer"
+    ]
+  },
+  "509220": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "509310": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "509850": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "510250": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Shared/Split Screen PvP",
+      "Shared/Split Screen"
+    ]
+  },
+  "512640": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "513570": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "514470": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Shared/Split Screen PvP",
+      "Shared/Split Screen"
+    ]
+  },
+  "514490": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "515570": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "515910": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "518800": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "522570": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "525300": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "526540": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Shared/Split Screen",
+      "Cross-Platform Multiplayer"
+    ]
+  },
+  "526880": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Shared/Split Screen PvP",
+      "Shared/Split Screen"
+    ]
+  },
+  "527770": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "527990": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "529950": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Shared/Split Screen PvP",
+      "Shared/Split Screen"
+    ]
+  },
+  "533330": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "539720": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "540610": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "542340": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "545690": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "546090": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "547310": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "548430": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "549100": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "551110": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "552520": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP"
+    ]
+  },
+  "553850": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "559960": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "562360": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "568020": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "569610": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "569970": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "578080": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP",
+      "Co-op"
+    ]
+  },
+  "582010": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "586350": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "586960": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "603190": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "615610": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "618510": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "623550": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "628760": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "634340": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "636150": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "640380": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "648800": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "661000": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "684680": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "684720": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP"
+    ]
+  },
+  "699180": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "699600": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "701470": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "713260": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "715010": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "718200": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "729660": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "733050": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "733070": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "739630": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "740290": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "766560": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "787070": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "793350": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "795920": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "805820": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "840310": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "840930": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "843430": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "843440": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "852110": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "855850": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Shared/Split Screen Co-op"
+    ]
+  },
+  "862570": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "865040": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Shared/Split Screen PvP",
+      "Co-op",
+      "Shared/Split Screen Co-op",
+      "Shared/Split Screen"
+    ]
+  },
+  "892970": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "898450": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "944220": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "945360": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer",
+      "Online PvP",
+      "Co-op"
+    ]
+  },
+  "967250": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "976730": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer",
+      "Co-op",
+      "PvP"
+    ]
+  },
+  "1029980": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "1056000": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "1070580": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP"
+    ]
+  },
+  "1085660": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "PvP"
+    ]
+  },
+  "1086940": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op",
+      "Shared/Split Screen"
+    ]
+  },
+  "1091500": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "1097150": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer",
+      "PvP",
+      "Co-op"
+    ]
+  },
+  "1145360": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "1172470": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer",
+      "PvP"
+    ]
+  },
+  "1172620": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Cross-Platform Multiplayer",
+      "Co-op",
+      "PvP"
+    ]
+  },
+  "1181000": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "1245620": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "PvP"
+    ]
+  },
+  "1326470": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "1426210": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op",
+      "Shared/Split Screen"
+    ]
+  },
+  "1623730": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op",
+      "PvP"
+    ]
+  },
+  "1711840": {
+    "is_multiplayer": false,
+    "categories": [
+      "Single-player"
+    ]
+  },
+  "1966720": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "3240220": {
+    "is_multiplayer": true,
+    "categories": [
+      "Multi-player",
+      "PvP",
+      "Online PvP",
+      "Co-op",
+      "Online Co-op"
+    ]
+  },
+  "test_123": {
+    "is_multiplayer": true,
+    "categories": [
+      "Co-op"
+    ]
+  }
+}

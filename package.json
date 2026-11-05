@@ -1,0 +1,26 @@
+{
+  "name": "steam-game-picker",
+  "version": "1.1.0",
+  "description": "Steam kütüphanenizdeki oyunlar arasından rastgele oyun seçici web uygulaması",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [
+    "steam",
+    "game-picker",
+    "express",
+    "random-game"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.0.0"
+  }
+}

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steam Game Picker | Kütüphanenden Rastgele Oyun Seç</title>
+  <meta name="description"
+    content="Steam kütüphanenizdeki oyunlar arasından ne oynayacağınıza karar veremiyorsanız rulet animasyonuyla rastgele oyun seçin.">
+  <meta name="referrer" content="no-referrer">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Google Fonts: Inter & Rajdhani -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Arka Plan Efekti -->
+  <div class="steam-ambient-bg">
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+    <div class="ambient-particles" id="ambientParticles"></div>
+  </div>
+
+  <div class="app-container">
+    <!-- Yerel Dosya Açılma Uyarısı (Sadece file:// protokolünde gösterilir) -->
+    <div class="file-protocol-banner hidden" id="localHostNotice">
+      <div class="banner-icon"><i class="fa-solid fa-circle-info"></i></div>
+      <div class="banner-text">
+        <strong>Önemli İpucu:</strong> Web sayfasını doğrudan dosya olarak (file://) açtınız. Steam ile giriş ve API
+        servislerinin sorunsuz çalışması için lütfen uygulamayı <a href="http://localhost:3000"
+          class="banner-link">http://localhost:3000</a> adresinden açınız.
+      </div>
+    </div>
+
+    <!-- Header Bölümü -->
+    <header class="app-header">
+      <!-- Ses Efektleri / Mute Açma-Kapama Kontrolü -->
+      <div class="header-top-bar">
+        <button id="soundToggleBtn" class="sound-toggle-btn" type="button" aria-label="Sesleri Aç veya Kapat"
+          title="Ses Efektleri: Açık (Kapatmak için tıklayın)">
+          <span class="sound-wave-bars">
+            <span></span><span></span><span></span>
+          </span>
+          <i class="fa-solid fa-volume-high" id="soundIcon"></i>
+          <span class="sound-btn-text" id="soundText">Ses Açık</span>
+        </button>
+      </div>
+
+      <div class="logo-wrapper">
+        <div class="logo-badge">
+          <img src="assets/logo.png" alt="Steam Game Picker Logo" class="app-logo-img">
+          <div class="logo-badge-glow"></div>
+        </div>
+        <div class="logo-text">
+          <h1 class="logo-title">STEAM GAME PICKER</h1>
+        </div>
+      </div>
+      <p class="header-tagline">
+        Kütüphanendeki yüzlerce oyun arasından ne oynayacağını seçemiyor musun? Şansına güven, ruleti çevir!
+      </p>
+    </header>
+
+    <!-- Ana Çalışma Modu Seçici (Kütüphanemden Seç vs Steam Mağazasında Keşfet) -->
+    <nav class="main-mode-switcher" aria-label="Ana Çalışma Modu">
+      <button type="button" class="main-mode-btn active" id="navLibraryModeBtn" data-view="library">
+        <i class="fa-solid fa-boxes-stacked"></i>
+        <div class="main-mode-text-group">
+          <span class="main-mode-title">Kütüphanemden Seç</span>
+          <span class="main-mode-desc">Kişisel Steam kütüphanenden rastgele oyun</span>
+        </div>
+      </button>
+      <button type="button" class="main-mode-btn" id="navExplorerModeBtn" data-view="explorer">
+        <i class="fa-solid fa-compass"></i>
+        <div class="main-mode-text-group">
+          <span class="main-mode-title">Steam Mağazasında Keşfet</span>
+          <span class="main-mode-desc">Kriterlerine göre mağaza oyunları önerisi</span>
+        </div>
+        <span class="mode-badge-new"><i class="fa-solid fa-sparkles"></i> SİHİRBAZ</span>
+      </button>
+    </nav>
+
+    <!-- Giriş ve Arama Kartı (Kütüphane Modu) -->
+    <section class="card input-card" id="searchSection">
+      <!-- Mod / Sekme Seçimi: Tek Kişilik & Ortak Oyun (Co-Op Matchmaker) -->
+      <div class="mode-tabs-container">
+        <div class="mode-tabs" role="tablist">
+          <button type="button" class="mode-tab-btn active" id="singleModeTab" data-mode="single" role="tab"
+            aria-selected="true">
+            <i class="fa-solid fa-user"></i>
+            <span>Tek Kişilik Oyun Seç</span>
+          </button>
+          <button type="button" class="mode-tab-btn" id="coopModeTab" data-mode="coop" role="tab" aria-selected="false">
+            <i class="fa-solid fa-user-group"></i>
+            <span>Ortak Oyun Seç (2 Oyuncu)</span>
+            <span class="coop-pill">CO-OP</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="card-header">
+        <h2 id="cardHeaderTitle"><i class="fa-solid fa-gamepad"></i> Steam Hesabını Bağla</h2>
+        <span class="badge badge-header-tag" id="cardHeaderBadge">KOLAY VE HIZLI</span>
+      </div>
+
+      <!-- TEK KİŞİLİK FORM MODU -->
+      <div class="input-form mode-content" id="singleFormContent">
+        <label for="steamInput" class="input-label">SteamID64, Özel Profil Linki veya Kullanıcı Adı:</label>
+        <div class="input-group">
+          <div class="input-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+          <input type="text" id="steamInput" placeholder="Örn: 76561198012345678 veya steamcommunity.com/id/gaben"
+            autocomplete="off" spellcheck="false">
+          <button id="fetchGamesBtn" class="btn btn-primary">
+            <span class="btn-text">Oyunları Getir</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="form-helper">
+          <span><i class="fa-regular fa-lightbulb"></i> İpucu: Profilinizin veya Oyun Detaylarınızın <strong>"Herkese
+              Açık" (Public)</strong> olması gereklidir.</span>
+        </div>
+
+        <!-- Tek Kişilik Alternatif Giriş Seçenekleri -->
+        <div class="auth-alternatives" id="singleAuthAlternatives">
+          <div class="divider">
+            <span>VEYA</span>
+          </div>
+
+          <div class="alt-actions">
+            <!-- Steam OpenID Giriş Butonu -->
+            <a href="/api/auth/steam" class="btn btn-steam-openid" id="steamOpenIdBtn"
+              title="Resmi Steam sayfası üzerinden güvenle oturum açın">
+              <i class="fa-brands fa-steam-symbol"></i>
+              <span>Steam ile Giriş Yap</span>
+            </a>
+
+            <!-- Hızlı Test Profili Butonu -->
+            <button type="button" class="btn btn-outline" id="demoProfileBtn"
+              title="Hemen test etmek için örnek bir kütüphane yükler">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <span>Örnek Profille Dene</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ORTAK OYUN (2 OYUNCU / CO-OP) FORM MODU -->
+      <div class="input-form mode-content hidden" id="coopFormContent">
+        <div class="coop-inputs-grid">
+          <div class="coop-input-field">
+            <label for="coopInput1" class="input-label"><i class="fa-solid fa-user"></i> 1. Oyuncu SteamID / Profil
+              Linki:</label>
+            <div class="input-group">
+              <div class="input-icon"><i class="fa-solid fa-user-check"></i></div>
+              <input type="text" id="coopInput1" placeholder="Örn: 76561198012345678 veya kendi profil linkiniz"
+                autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+
+          <div class="coop-vs-divider">
+            <div class="coop-divider-circle">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+          </div>
+
+          <div class="coop-input-field">
+            <label for="coopInput2" class="input-label"><i class="fa-solid fa-user-plus"></i> 2. Oyuncu SteamID / Profil
+              Linki:</label>
+            <div class="input-group">
+              <div class="input-icon"><i class="fa-solid fa-user-group"></i></div>
+              <input type="text" id="coopInput2" placeholder="Örn: 76561198087654321 veya arkadaşınızın profili"
+                autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+        </div>
+
+        <div class="coop-action-row">
+          <button id="fetchCommonGamesBtn" class="btn btn-primary btn-block">
+            <i class="fa-solid fa-people-arrows"></i>
+            <span class="btn-text">Ortak Oyunları Bul</span>
+          </button>
+        </div>
+
+        <div class="form-helper">
+          <span><i class="fa-regular fa-lightbulb"></i> İpucu: Her iki oyuncunun da Steam Gizlilik Ayarlarından
+            <strong>"Oyun Detayları"</strong> seçeneğini <strong>"Herkese Açık"</strong> yapması gerekir.</span>
+        </div>
+
+        <!-- Co-Op Alternatif Hızlı Test Seçenekleri -->
+        <div class="auth-alternatives" id="coopAuthAlternatives">
+          <div class="divider">
+            <span>HIZLI TEST</span>
+          </div>
+
+          <div class="alt-actions">
+            <button type="button" class="btn btn-outline" id="demoCoopBtn"
+              title="Hemen test etmek için açık kütüphaneli 2 örnek oyuncu yükler">
+              <i class="fa-solid fa-users-viewfinder"></i>
+              <span>Örnek 2 Oyuncu ile Dene</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEAM OYUN KEŞİF SİHİRBAZI (STORE EXPLORER) PANELİ -->
+    <section class="card explorer-card hidden" id="explorerSection">
+      <div class="card-header">
+        <h2><i class="fa-solid fa-wand-magic-sparkles"></i> Steam Oyun Keşif Sihirbazı</h2>
+        <span class="badge badge-explorer">Mağaza Kataloğu</span>
+      </div>
+      <p class="explorer-intro">
+        Steam mağazasında saatlerce ne oynasam diye aramaya son! Kriterlerini belirle, zevkine ve bütçene en uygun nokta
+        atışı oyunu saniyeler içinde keşfet.
+      </p>
+
+      <div class="explorer-criteria-grid">
+        <!-- 1. Tür (Genre) Seçimi (Çoklu Seçim Çipleri) -->
+        <div class="criteria-group">
+          <div class="criteria-header">
+            <span class="criteria-title"><i class="fa-solid fa-tags"></i> 1. Oyun Türleri:</span>
+            <span class="criteria-hint">(Birden fazla seçilebilir)</span>
+          </div>
+          <div class="criteria-chips-wrap" id="genreChipsGroup">
+            <button type="button" class="criteria-chip genre-chip" data-genre="action">
+              <i class="fa-solid fa-gun"></i> Aksiyon
+            </button>
+            <button type="button" class="criteria-chip genre-chip" data-genre="rpg">
+              <i class="fa-solid fa-shield-halved"></i> RPG / RYO
+            </button>
+            <button type="button" class="criteria-chip genre-chip" data-genre="strategy">
+              <i class="fa-solid fa-chess"></i> Strateji
+            </button>
+            <button type="button" class="criteria-chip genre-chip" data-genre="indie">
+              <i class="fa-solid fa-dice-d20"></i> Bağımsız (Indie)
+            </button>
+            <button type="button" class="criteria-chip genre-chip" data-genre="horror">
+              <i class="fa-solid fa-ghost"></i> Korku
+            </button>
+            <button type="button" class="criteria-chip genre-chip" data-genre="simulation">
+              <i class="fa-solid fa-truck"></i> Simülasyon
+            </button>
+            <button type="button" class="criteria-chip genre-chip" data-genre="adventure">
+              <i class="fa-solid fa-map-location-dot"></i> Macera
+            </button>
+            <button type="button" class="criteria-chip genre-chip" data-genre="fps">
+              <i class="fa-solid fa-crosshairs"></i> FPS / Nişancı
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Bütçe / Fiyat Filtresi (Dual Range Slider) -->
+        <div class="criteria-group">
+          <div class="criteria-header">
+            <span class="criteria-title"><i class="fa-solid fa-coins"></i> 2. Fiyat / Bütçe Aralığı:</span>
+            <div class="price-slider-values" id="priceSliderValues">
+              <span class="price-val-tag" id="minPriceDisplay">0 TL</span>
+              <span class="price-val-sep">—</span>
+              <span class="price-val-tag" id="maxPriceDisplay">1500+ TL</span>
+            </div>
+          </div>
+
+          <!-- Dual Range Slider Çubuğu -->
+          <div class="dual-range-wrapper">
+            <div class="dual-range-track">
+              <div class="dual-range-highlight" id="rangeHighlight"></div>
+            </div>
+            <input type="range" id="minPriceInput" min="0" max="1500" step="50" value="0" aria-label="Minimum Fiyat">
+            <input type="range" id="maxPriceInput" min="0" max="1500" step="50" value="1500"
+              aria-label="Maksimum Fiyat">
+          </div>
+
+          <div class="range-ticks">
+            <span>0 TL</span>
+            <span>250 TL</span>
+            <span>500 TL</span>
+            <span>1000 TL</span>
+            <span>1500+ TL</span>
+          </div>
+
+          <!-- Hızlı Fiyat Ön Tanımları -->
+          <div class="quick-price-chips" id="quickPriceChips">
+            <button type="button" class="quick-price-btn active" data-preset="all">Tüm Fiyatlar</button>
+            <button type="button" class="quick-price-btn" data-preset="free">Sadece Ücretsiz (0 TL)</button>
+            <button type="button" class="quick-price-btn" data-preset="under250">250 TL Altı</button>
+            <button type="button" class="quick-price-btn" data-preset="under500">500 TL Altı</button>
+            <button type="button" class="quick-price-btn" data-preset="discount">İndirimdekiler</button>
+          </div>
+        </div>
+
+        <!-- 3. Oyuncu Modu (Tekil Seçim) -->
+        <div class="criteria-group">
+          <div class="criteria-header">
+            <span class="criteria-title"><i class="fa-solid fa-users"></i> 3. Oyuncu Modu:</span>
+          </div>
+          <div class="criteria-chips-wrap radio-group" id="playerModeChipsGroup">
+            <button type="button" class="criteria-chip player-chip active" data-player="all">
+              <i class="fa-solid fa-gamepad"></i> Tümü (Fark Etmez)
+            </button>
+            <button type="button" class="criteria-chip player-chip" data-player="single">
+              <i class="fa-solid fa-user"></i> Tek Oyunculu (Singleplayer)
+            </button>
+            <button type="button" class="criteria-chip player-chip" data-player="multi">
+              <i class="fa-solid fa-user-group"></i> Çok Oyunculu / Co-op
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Minimum İnceleme Puanı (Tekil Seçim) -->
+        <div class="criteria-group">
+          <div class="criteria-header">
+            <span class="criteria-title"><i class="fa-solid fa-thumbs-up"></i> 4. Kullanıcı İnceleme Puanı:</span>
+          </div>
+          <div class="criteria-chips-wrap radio-group" id="minScoreChipsGroup">
+            <button type="button" class="criteria-chip score-chip active" data-score="all">
+              <i class="fa-solid fa-star-half-stroke"></i> Tümü
+            </button>
+            <button type="button" class="criteria-chip score-chip" data-score="80">
+              <i class="fa-solid fa-thumbs-up"></i> Çok Olumlu (%80+)
+            </button>
+            <button type="button" class="criteria-chip score-chip" data-score="90">
+              <i class="fa-solid fa-award"></i> Son Derece Olumlu (%90+)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aksiyon Butonu: Bana Oyun Öner! -->
+      <div class="explorer-action-box">
+        <button id="exploreGameBtn" class="btn btn-explorer-action" type="button">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span class="explore-btn-title">BANA OYUN ÖNER!</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Keşif / Karıştırma Animasyon Sahnesi -->
+    <section class="explorer-loading-container hidden" id="explorerLoadingSection">
+      <div class="explorer-radar-box">
+        <div class="radar-pulse"></div>
+        <div class="radar-scanner"></div>
+        <i class="fa-solid fa-compass radar-center-icon fa-spin"></i>
+      </div>
+      <h3 class="explorer-loading-title" id="explorerLoadingTitle">Steam Mağazası Taranıyor...</h3>
+      <p class="explorer-loading-sub" id="explorerLoadingSub">Kriterlerine uyan popüler oyunlar süzülüyor ve sana özel
+        en iyisi seçiliyor...</p>
+    </section>
+
+    <!-- Yükleme Durumu (Spinner) -->
+    <section class="loading-section hidden" id="loadingSection">
+      <div class="steam-spinner">
+        <div class="spinner-ring"></div>
+        <img src="assets/logo.png" alt="Yükleniyor..." class="spinner-logo">
+      </div>
+      <h3 class="loading-title" id="loadingText">Steam Kütüphaneniz Yükleniyor...</h3>
+      <p class="loading-sub" id="loadingSub">Oyunlar ve profil detayları getiriliyor, lütfen bekleyin.</p>
+    </section>
+
+    <!-- Hata Bildirim Alanı -->
+    <section class="alert-box alert-error hidden" id="errorBox">
+      <div class="alert-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+      <div class="alert-content">
+        <h4 id="errorTitle">Bir Hata Oluştu</h4>
+        <p id="errorMessage">Hata açıklaması buraya gelecek.</p>
+        <div class="privacy-help hidden" id="privacyHelp">
+          <p><strong>Steam Gizlilik Ayarlarını Nasıl Değiştirirsiniz?</strong></p>
+          <ol>
+            <li>Steam profilinize gidin ve <em>"Profili Düzenle"</em> butonuna tıklayın.</li>
+            <li>Sol menüden <em>"Gizlilik Ayarları"</em> sekmesini seçin.</li>
+            <li><em>"Profilim"</em> ve <em>"Oyun Detayları"</em> seçeneklerini <strong>"Herkese Açık"</strong> yapın.
+            </li>
+          </ol>
+        </div>
+      </div>
+      <button class="alert-close" id="closeErrorBtn">&times;</button>
+    </section>
+
+    <!-- Profil Bilgisi ve Kütüphane Kontrol Paneli -->
+    <section class="profile-dashboard hidden" id="profileDashboard">
+      <!-- TEK KİŞİLİK PROFİL ÇUBUĞU -->
+      <div class="user-profile-bar" id="singleProfileBar">
+        <div class="user-info">
+          <img src="" alt="Avatar" id="userAvatar" class="user-avatar">
+          <div class="user-details">
+            <div class="user-name-row">
+              <h3 id="userName">Kullanıcı Adı</h3>
+              <a href="#" target="_blank" rel="noopener noreferrer" id="userProfileLink" class="user-profile-badge"
+                title="Steam Profilini Yeni Sekmede Aç">
+                <i class="fa-solid fa-up-right-from-square"></i> Profil
+              </a>
+            </div>
+            <p class="user-stats">
+              <span id="statGameCount"><i class="fa-solid fa-layer-group"></i> <strong>0</strong> Oyun</span>
+              <span class="stat-separator">•</span>
+              <span id="statTotalHours"><i class="fa-regular fa-clock"></i> <strong>0</strong> Saat Toplam</span>
+            </p>
+          </div>
+        </div>
+
+        <button class="btn btn-sm btn-ghost" id="changeAccountBtn" title="Farklı bir hesapla dene">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i> Hesabı Değiştir
+        </button>
+      </div>
+
+      <!-- ORTAK OYUN (CO-OP) ÇİFT PROFİL ÇUBUĞU -->
+      <div class="user-profile-bar coop-profile-bar hidden" id="coopProfileBar">
+        <div class="coop-summary-container">
+          <!-- 1. Oyuncu Kartı -->
+          <div class="coop-mini-profile">
+            <img src="" alt="1. Oyuncu Avatar" id="coopAvatar1" class="user-avatar">
+            <div class="coop-mini-details">
+              <span class="coop-role-tag">1. Oyuncu</span>
+              <h4 id="coopName1" class="coop-player-name">Oyuncu 1</h4>
+              <a href="#" target="_blank" rel="noopener noreferrer" id="coopProfileLink1" class="user-profile-badge"
+                title="Steam Profilini Aç">
+                <i class="fa-solid fa-up-right-from-square"></i> Profil
+              </a>
+            </div>
+          </div>
+
+          <!-- Ortak Kesişim Rozeti -->
+          <div class="coop-bridge">
+            <div class="coop-bridge-icon">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <span class="coop-bridge-text">ORTAK HAVUZ</span>
+          </div>
+
+          <!-- 2. Oyuncu Kartı -->
+          <div class="coop-mini-profile">
+            <img src="" alt="2. Oyuncu Avatar" id="coopAvatar2" class="user-avatar">
+            <div class="coop-mini-details">
+              <span class="coop-role-tag">2. Oyuncu</span>
+              <h4 id="coopName2" class="coop-player-name">Oyuncu 2</h4>
+              <a href="#" target="_blank" rel="noopener noreferrer" id="coopProfileLink2" class="user-profile-badge"
+                title="Steam Profilini Aç">
+                <i class="fa-solid fa-up-right-from-square"></i> Profil
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="coop-bar-actions">
+          <div class="coop-common-stats">
+            <span id="coopCommonGamesBadge" class="badge badge-coop">
+              <i class="fa-solid fa-gamepad"></i> <strong id="coopCommonCount">0</strong> Çok Oyunculu Ortak Oyun
+            </span>
+          </div>
+          <button class="btn btn-sm btn-ghost" id="changeCoopAccountBtn" title="Oyuncuları Değiştir">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Hesapları Değiştir
+          </button>
+        </div>
+      </div>
+
+      <!-- Filtreleme Çubuğu — Segmented Control -->
+      <div class="filter-controls">
+        <span class="filter-label"><i class="fa-solid fa-filter"></i> Seçim Havuzu:</span>
+        <div class="filter-segmented" role="tablist">
+          <div class="filter-slider" id="filterSlider"></div>
+          <button class="filter-chip filter-btn active" data-filter="all" role="tab" aria-selected="true">
+            <i class="fa-solid fa-layer-group filter-chip-icon"></i>
+            <span class="filter-chip-text" id="filterAllLabel">Tüm Oyunlar</span>
+            <span class="filter-chip-badge" id="filterAllCount">0</span>
+          </button>
+          <button class="filter-chip filter-btn" data-filter="unplayed" role="tab" aria-selected="false">
+            <i class="fa-solid fa-lock filter-chip-icon"></i>
+            <span class="filter-chip-text" id="filterUnplayedLabel">Hiç Oynamadıklarım</span>
+            <span class="filter-chip-badge" id="filterUnplayedCount">0</span>
+          </button>
+          <button class="filter-chip filter-btn" data-filter="low" role="tab" aria-selected="false">
+            <i class="fa-solid fa-hourglass-half filter-chip-icon"></i>
+            <span class="filter-chip-text" id="filterLowLabel">Az Oynadıklarım</span>
+            <span class="filter-chip-badge" id="filterLowCount">0</span>
+          </button>
+          <button class="filter-chip filter-btn" data-filter="played" role="tab" aria-selected="false">
+            <i class="fa-solid fa-fire filter-chip-icon"></i>
+            <span class="filter-chip-text" id="filterPlayedLabel">Çok Oynadıklarım</span>
+            <span class="filter-chip-badge" id="filterPlayedCount">0</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Rastgele Seçim Aksiyon Butonu -->
+      <div class="picker-action-box">
+        <button id="pickGameBtn" class="btn btn-pick-random">
+          <i class="fa-solid fa-dice"></i>
+          <span class="pick-text">RASTGELE OYUN SEÇ</span>
+          <span class="pick-sub">Şansını dene ve oynamaya başla!</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Rulet / Shuffle Animasyon Sahnesi -->
+    <section class="roulette-container hidden" id="rouletteSection">
+      <div class="roulette-header">
+        <span class="roulette-badge"><i class="fa-solid fa-compact-disc fa-spin"></i> SEÇİLİYOR...</span>
+        <h3>Kütüphanen Karıştırılıyor</h3>
+      </div>
+
+      <!-- Slot Rulet Şeridi -->
+      <div class="roulette-window">
+        <div class="roulette-indicator"></div>
+        <div class="roulette-track" id="rouletteTrack">
+          <!-- Dinamik olarak oyun kartları buraya eklenir -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Seçilen Oyun Sonuç Kartı -->
+    <section class="result-showcase hidden" id="resultSection">
+      <div class="result-celebration">
+        <i class="fa-solid fa-trophy trophy-icon"></i>
+        <span id="resultCelebrationText">İŞTE BUGÜNKÜ OYUNUN!</span>
+      </div>
+
+      <div class="game-result-card" id="gameResultCard">
+        <div class="game-poster-wrapper">
+          <div class="poster-backdrop" id="resultPosterBackdrop"></div>
+          <img src="" alt="Oyun Kapağı" id="resultGameImage" class="game-poster">
+          <div class="poster-overlay">
+            <span class="playtime-tag" id="resultPlaytimeTag">
+              <i class="fa-regular fa-clock"></i> <span>0 Saat</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="game-details">
+          <div class="game-title-row">
+            <h2 class="game-title" id="resultGameTitle">Oyun Adı</h2>
+            <span class="badge badge-coop hidden" id="resultCoopBadge">
+              <i class="fa-solid fa-users"></i> Birlikte Oynanabilir (Co-Op)
+            </span>
+          </div>
+          <!-- Çok Oyunculu Etiketleri / Kategorileri -->
+          <div class="result-categories-row hidden" id="resultCategoriesRow"></div>
+
+          <div class="game-meta-grid">
+            <div class="meta-item" id="resultTotalTimeBox">
+              <span class="meta-label" id="resultTotalTimeLabel"><i class="fa-regular fa-clock"></i> Toplam Süre:</span>
+              <span class="meta-value" id="resultTotalTime">0 saat</span>
+            </div>
+            <div class="meta-item" id="resultRecentTimeBox">
+              <span class="meta-label"><i class="fa-solid fa-fire"></i> Son 2 Hafta:</span>
+              <span class="meta-value" id="resultRecentTime">0 saat</span>
+            </div>
+            <!-- Co-Op Oyuncu Süre Detayları -->
+            <div class="meta-item hidden" id="resultCoopPlayer1Box">
+              <span class="meta-label" id="resultPlayer1Label"><i class="fa-solid fa-user"></i> 1. Oyuncu:</span>
+              <span class="meta-value" id="resultPlayer1Time">0 saat</span>
+            </div>
+            <div class="meta-item hidden" id="resultCoopPlayer2Box">
+              <span class="meta-label" id="resultPlayer2Label"><i class="fa-solid fa-user-group"></i> 2. Oyuncu:</span>
+              <span class="meta-value" id="resultPlayer2Time">0 saat</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label"><i class="fa-solid fa-hashtag"></i> App ID:</span>
+              <span class="meta-value" id="resultAppId">0</span>
+            </div>
+          </div>
+
+          <div class="game-actions">
+            <!-- Steam İstemcisinde Doğrudan Başlat -->
+            <a href="#" id="resultLaunchBtn" class="btn btn-success btn-lg">
+              <i class="fa-solid fa-play"></i>
+              <span>Steam'de Hemen Oyna</span>
+            </a>
+
+            <!-- Steam Mağazası Sayfası (Web - HTTPS, no-referrer & noopener korumalı) -->
+            <a href="#" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" id="resultStoreBtn"
+              class="btn btn-outline-cyan" title="Steam mağazasını web tarayıcısında aç">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span>Mağazada İncele</span>
+            </a>
+
+            <!-- Steam Masaüstü İstemcisinde Mağaza Sayfası -->
+            <a href="#" id="resultSteamStoreBtn" class="btn btn-outline"
+              title="Steam masaüstü uygulamasında mağaza sayfasını aç">
+              <i class="fa-brands fa-steam"></i>
+              <span>İstemcide İncele</span>
+            </a>
+
+            <!-- Yeniden Seç Butonu -->
+            <button id="rePickBtn" class="btn btn-secondary">
+              <i class="fa-solid fa-rotate-right"></i>
+              <span>Tekrar Seç</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Keşfedilen Oyun Sonuç Kartı (Store Explorer) -->
+    <section class="result-showcase hidden" id="explorerResultSection">
+      <div class="result-celebration explorer-celebration">
+        <i class="fa-solid fa-wand-magic-sparkles trophy-icon"></i>
+        <span>İŞTE SANA ÖZEL MAĞAZA ÖNERİSİ!</span>
+      </div>
+
+      <div class="game-result-card explorer-result-card" id="explorerResultCard">
+        <div class="game-poster-wrapper">
+          <div class="poster-backdrop" id="explorerPosterBackdrop"></div>
+          <img src="" alt="Oyun Kapağı" id="explorerGameImage" class="game-poster">
+          <div class="poster-overlay">
+            <span class="price-tag-badge" id="explorerPriceBadge">
+              <i class="fa-solid fa-tag"></i> <span id="explorerPriceText">0 TL</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="game-details">
+          <div class="game-title-row">
+            <h2 class="game-title" id="explorerGameTitle">Oyun Adı</h2>
+            <span class="badge badge-score" id="explorerReviewBadge">
+              <i class="fa-solid fa-thumbs-up"></i> <span id="explorerReviewText">%95 Olumlu</span>
+            </span>
+          </div>
+
+          <!-- Tür ve Kategori Etiketleri -->
+          <div class="result-categories-row" id="explorerTagsRow"></div>
+
+          <p class="explorer-game-desc" id="explorerGameDesc">
+            Oyun açıklaması buraya gelecek.
+          </p>
+
+          <div class="game-meta-grid">
+            <div class="meta-item">
+              <span class="meta-label"><i class="fa-solid fa-coins"></i> Fiyat:</span>
+              <span class="meta-value" id="explorerMetaPrice">-</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label"><i class="fa-solid fa-users"></i> Oyuncu Modu:</span>
+              <span class="meta-value" id="explorerMetaPlayerMode">-</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label"><i class="fa-solid fa-hashtag"></i> App ID:</span>
+              <span class="meta-value" id="explorerAppId">0</span>
+            </div>
+          </div>
+
+          <div class="game-actions">
+            <!-- Steam Mağazası Sayfası -->
+            <a href="#" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" id="explorerStoreBtn"
+              class="btn btn-success btn-lg" title="Steam mağazasını web tarayıcısında aç">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span>Steam Mağazasında İncele</span>
+            </a>
+
+            <!-- Steam Masaüstü İstemcisinde Aç -->
+            <a href="#" id="explorerSteamStoreBtn" class="btn btn-outline"
+              title="Steam masaüstü uygulamasında mağaza sayfasını aç">
+              <i class="fa-brands fa-steam"></i>
+              <span>İstemcide İncele</span>
+            </a>
+
+            <!-- Yeniden Seç Butonu -->
+            <button id="reExploreBtn" class="btn btn-secondary" type="button">
+              <i class="fa-solid fa-rotate-right"></i>
+              <span>Farklı Bir Oyun Öner</span>
+            </button>
+
+            <!-- Kriterleri Değiştir Butonu -->
+            <button id="changeCriteriaBtn" class="btn btn-ghost" type="button">
+              <i class="fa-solid fa-sliders"></i>
+              <span>Kriterleri Düzenle</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alternatif Öneriler Alanı (Benzer Kriterdeki Diğer 3 Oyun) -->
+      <div class="explorer-alternatives-container hidden" id="explorerAlternativesContainer">
+        <div class="alternatives-header">
+          <i class="fa-solid fa-layer-group"></i>
+          <h4>Kriterlerine Uyan Diğer Alternatifler:</h4>
+        </div>
+        <div class="alternatives-grid" id="explorerAlternativesGrid">
+          <!-- Dinamik mini kartlar JS tarafından güvenle render edilir -->
+        </div>
+      </div>
+    </section>
+    <footer class="app-footer">
+      <p>
+        Bu uygulama bağımsız bir açık kaynak araçtır ve <strong>Valve Corporation</strong> veya <strong>Steam</strong>
+        ile resmi bir bağı yoktur.
+      </p>
+      <p class="footer-links">
+        <span>Steam Web API v0001</span> •
+        <span><i class="fa-solid fa-shield-halved"></i> Güvenli & API Destekli</span>
+      </p>
+    </footer>
+  </div>
+
+  <!-- Zafer Kutlaması Konfeti Tuvali -->
+  <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+
+  <!-- Audio Efektleri ve Uygulama Mantığı -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
