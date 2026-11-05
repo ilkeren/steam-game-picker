@@ -3130,56 +3130,6 @@ body {
   gap: 4px;
 }
 
-/* Mobil Uyumluluk */
-@media (max-width: 768px) {
-  .main-mode-switcher {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .main-mode-btn {
-    padding: 12px 14px;
-    gap: 10px;
-  }
-
-  .main-mode-title {
-    font-size: 15px;
-  }
-
-  .main-mode-desc {
-    font-size: 10.5px;
-  }
-
-  .criteria-chips-wrap {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: 4px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .criteria-chips-wrap::-webkit-scrollbar {
-    display: none;
-  }
-
-  .criteria-chip {
-    flex: 0 0 auto;
-    padding: 8px 12px;
-    font-size: 12px;
-  }
-
-  .btn-explorer-action {
-    padding: 15px 16px;
-  }
-
-  .explore-btn-title {
-    font-size: 18px;
-  }
-
-  .alternatives-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* ==========================================================================
    Dual Range Slider & Canlı Sayaç Stilleri (Steam Neon Vurgulu)
@@ -3359,4 +3309,562 @@ body {
   border-color: #1bd1bc;
   color: #ffffff;
   box-shadow: 0 0 10px rgba(27, 209, 188, 0.35);
+}
+
+/* ==========================================================================
+   Steam Oyun Keşif Sihirbazı — Responsive & Mobile-First İyileştirmeleri
+   (Tablet: <= 768px & Akıllı Telefon: <= 480px)
+   ========================================================================== */
+
+/* ---- Tablet ve Geniş Telefonlar (max-width: 768px) ---- */
+@media (max-width: 768px) {
+  /* 1. Ana Mod Değiştirici */
+  .main-mode-switcher {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+  }
+
+  .main-mode-btn {
+    width: 100%;
+    min-height: 52px;
+    padding: 12px 16px;
+    gap: 12px;
+    box-sizing: border-box;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .main-mode-btn i {
+    font-size: 20px;
+  }
+
+  .main-mode-title {
+    font-size: 15px;
+  }
+
+  .main-mode-desc {
+    font-size: 11px;
+  }
+
+  /* 2. Explorer Paneli ve Tanıtım Alanı */
+  .explorer-card {
+    padding: 20px 14px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .explorer-intro {
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    word-break: break-word;
+  }
+
+  /* 3. Kriter Izgarası (Criteria Grid) */
+  .explorer-criteria-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .criteria-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .criteria-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .criteria-title {
+    font-size: 14.5px;
+    letter-spacing: 0.3px;
+  }
+
+  .criteria-hint {
+    font-size: 11px;
+  }
+
+  /* 4. Tür (Genre) Seçimi: 2 Kolonlu Dengeli CSS Grid, Minimum 44px Dokunma Alanı */
+  #genreChipsGroup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    width: 100%;
+    overflow: visible;
+    box-sizing: border-box;
+  }
+
+  .genre-chip,
+  .criteria-chip {
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 12.5px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    white-space: normal;
+    word-break: break-word;
+    box-sizing: border-box;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .genre-chip i,
+  .criteria-chip i {
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  /* 5. Bütçe & Fiyat Aralığı (Dual Range Slider) */
+  .price-slider-values {
+    margin-left: 0;
+    gap: 6px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .price-val-tag {
+    font-size: 13px;
+    padding: 4px 9px;
+    min-height: 28px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .dual-range-wrapper {
+    height: 44px;
+    margin: 8px 0 2px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .dual-range-wrapper input[type="range"]::-webkit-slider-thumb {
+    width: 28px;
+    height: 28px;
+  }
+
+  .dual-range-wrapper input[type="range"]::-moz-range-thumb {
+    width: 28px;
+    height: 28px;
+  }
+
+  .range-ticks {
+    font-size: 10.5px;
+    padding: 0 4px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Hızlı Fiyat Ön Tanımları (2 Kolonlu Dokunmatik Grid, Min 44px) */
+  .quick-price-chips {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    width: 100%;
+    margin-top: 10px;
+    box-sizing: border-box;
+  }
+
+  .quick-price-chips .quick-price-btn:last-child:nth-child(odd) {
+    grid-column: span 2;
+  }
+
+  .quick-price-btn {
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* 6. Oyuncu Modu & Puan Seçimleri: Dikey Liste Hizalaması (Flex-Direction: Column) */
+  #playerModeChipsGroup,
+  #minScoreChipsGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    overflow: visible;
+    box-sizing: border-box;
+  }
+
+  #playerModeChipsGroup .criteria-chip,
+  #minScoreChipsGroup .criteria-chip {
+    width: 100%;
+    min-height: 44px;
+    padding: 11px 16px;
+    font-size: 13px;
+    justify-content: flex-start;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+  /* 7. Aksiyon Butonu ("Bana Oyun Öner!") */
+  .explorer-action-box {
+    margin-top: 20px;
+    padding-top: 16px;
+    width: 100%;
+  }
+
+  .btn-explorer-action {
+    width: 100%;
+    min-height: 54px;
+    padding: 14px 20px;
+    gap: 12px;
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    touch-action: manipulation;
+  }
+
+  .btn-explorer-action i {
+    font-size: 20px;
+  }
+
+  .explore-btn-title {
+    font-size: 16.5px;
+    letter-spacing: 0.8px;
+  }
+
+  /* 8. Radar Yükleme Sahnesi */
+  .explorer-loading-container {
+    padding: 34px 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .explorer-radar-box {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 16px;
+  }
+
+  .radar-center-icon {
+    font-size: 26px;
+  }
+
+  .explorer-loading-title {
+    font-size: 19px;
+  }
+
+  .explorer-loading-sub {
+    font-size: 12.5px;
+    line-height: 1.45;
+  }
+
+  /* 9. Öneri Başlığı */
+  .result-celebration.explorer-celebration {
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    text-align: center;
+    padding: 0 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* 10. Seçilen Oyun Sonuç Kartı — Mobilde Dikey Düzen & %100 Ekran Genişliği */
+  .explorer-result-card {
+    flex-direction: column !important;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+  }
+
+  .explorer-result-card .game-poster-wrapper {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    min-height: 180px;
+    max-height: 230px;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    box-sizing: border-box;
+  }
+
+  .explorer-result-card .game-poster {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 230px;
+    aspect-ratio: 460 / 215;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+  }
+
+  .price-tag-badge {
+    top: 10px;
+    left: 10px;
+    padding: 6px 12px;
+    font-size: 12.5px;
+    min-height: 32px;
+  }
+
+  .explorer-result-card .game-details {
+    padding: 18px 14px;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 12px;
+  }
+
+  .explorer-result-card .game-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .explorer-result-card .game-title {
+    font-size: 21px;
+    line-height: 1.25;
+    margin-bottom: 0;
+    word-break: break-word;
+  }
+
+  .explorer-result-card .badge-score {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .explorer-game-desc {
+    font-size: 13px;
+    line-height: 1.55;
+    padding: 10px 12px;
+    margin: 4px 0 8px;
+    border-radius: 6px;
+    word-break: break-word;
+  }
+
+  .explorer-result-card .game-meta-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 10px;
+    margin-bottom: 6px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .explorer-result-card .game-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+
+  .explorer-result-card .game-actions .btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 16px;
+    font-size: 14px;
+    justify-content: center;
+    box-sizing: border-box;
+    touch-action: manipulation;
+  }
+
+  /* 11. Alternatif Öneriler Alanı (Benzer Kriterdeki Oyunlar) */
+  .explorer-alternatives-container {
+    margin-top: 22px;
+    padding-top: 18px;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .alternatives-header {
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  .alternatives-header h4 {
+    font-size: 15px;
+  }
+
+  .alternatives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .alt-game-card {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    min-height: 48px;
+    box-sizing: border-box;
+    touch-action: manipulation;
+  }
+
+  .alt-game-thumb-wrap {
+    width: 100%;
+    max-width: 100%;
+    height: 125px;
+    overflow: hidden;
+    position: relative;
+    background: #080d13;
+  }
+
+  .alt-game-img,
+  .alt-game-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .alt-game-info {
+    padding: 11px 12px;
+    min-height: 44px;
+    box-sizing: border-box;
+  }
+
+  .alt-game-title {
+    font-size: 13.5px;
+  }
+
+  .alt-game-meta {
+    font-size: 11.5px;
+  }
+}
+
+/* ---- Akıllı Telefonlar ve Küçük Mobil Ekranlar (max-width: 480px) ---- */
+@media (max-width: 480px) {
+  /* Panel Dolguları */
+  .explorer-card {
+    padding: 16px 12px;
+  }
+
+  .explorer-intro {
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+
+  /* Dar Mobil Ekranlarda Tür Seçimi Grid'i */
+  #genreChipsGroup {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 6px;
+  }
+
+  .genre-chip,
+  .criteria-chip {
+    font-size: 12px;
+    padding: 10px 8px;
+    min-height: 44px;
+  }
+
+  .criteria-title {
+    font-size: 13.5px;
+  }
+
+  .price-val-tag {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+
+  .range-ticks {
+    font-size: 9.5px;
+    letter-spacing: -0.3px;
+  }
+
+  /* Hızlı Fiyat Ön Tanımları: Tek Sütun veya Kompakt */
+  .quick-price-chips {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .quick-price-chips .quick-price-btn:last-child:nth-child(odd) {
+    grid-column: span 1;
+  }
+
+  .quick-price-btn {
+    min-height: 44px;
+    font-size: 12px;
+  }
+
+  #playerModeChipsGroup .criteria-chip,
+  #minScoreChipsGroup .criteria-chip {
+    font-size: 12.5px;
+    padding: 11px 12px;
+  }
+
+  .btn-explorer-action {
+    padding: 14px 16px;
+    min-height: 50px;
+  }
+
+  .explore-btn-title {
+    font-size: 15px;
+  }
+
+  /* Sonuç Kartı Boyutlandırması */
+  .explorer-result-card .game-poster-wrapper {
+    min-height: 150px;
+    max-height: 190px;
+  }
+
+  .explorer-result-card .game-poster {
+    max-height: 190px;
+  }
+
+  .explorer-result-card .game-details {
+    padding: 14px 10px;
+  }
+
+  .explorer-result-card .game-title {
+    font-size: 19px;
+  }
+
+  .explorer-result-card .game-meta-grid {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .meta-value {
+    font-size: 13.5px;
+  }
+
+  /* Alternatif Kartlar: Küçük Mobilde Tek Kolon */
+  .alternatives-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .alt-game-thumb-wrap {
+    height: 115px;
+  }
 }
