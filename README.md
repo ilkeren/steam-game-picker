@@ -1,83 +1,98 @@
 # 🎮 Steam Game Picker
 
-Steam kütüphanenizdeki oyunlar arasından ne oynayacağınıza karar veremiyorsanız, rulet animasyonuyla rastgele oyun seçmenizi sağlayan modern bir web uygulaması.
+Steam kütüphanenizdeki oyunlar arasından ne oynayacağınıza karar veremiyor musunuz?
 
----
+**Steam Game Picker**, Steam kullanıcılarının oyun kütüphanelerindeki oyunlar arasından rastgele seçim yapmasını ve arkadaşlarıyla ortak oyunlarını keşfetmesini sağlayan web tabanlı bir uygulamadır.
 
 ## 🌟 Özellikler
 
-- **Modern Steam arayüzü:** Koyu tema, neon detaylar, glassmorphism kartlar ve akıcı animasyonlar.
-- **Tek oyunculu seçim:** Steam kütüphanenizden rastgele oyun seçimi.
-- **Ortak kütüphane / Co-op Matchmaker:** İki Steam kullanıcısının ortak oyunlarını bulma ve birlikte oynanabilecek oyunlar arasından seçim yapma.
-- **Ses efektleri:** Web Audio API ile rulet tıkırtıları ve kazanan oyun sesi; ses tercihi LocalStorage ile hatırlanır.
-- **Esnek Steam kimliği girişi:** SteamID64, özel profil bağlantısı veya profil adı.
-- **Steam OpenID 2.0:** Steam ile giriş.
-- **Kütüphane filtreleri:** Tüm oyunlar, hiç oynanmayanlar, az oynananlar ve çok oynananlar.
-- **Steam entegrasyonu:** Oyunları Steam istemcisinde başlatma ve mağaza sayfalarına gitme.
-- **Örnek profiller:** Uygulamayı örnek kullanıcılarla deneme.
-
----
+- 🎯 **Rastgele Oyun Seçimi:** Steam kütüphanenizden rastgele bir oyun seçin.
+- 🎮 **Modern Arayüz:** Steam temalı, karanlık tasarım ve animasyonlar.
+- 👥 **Ortak Oyun Bulma:** İki kullanıcının ortak oyunlarını keşfedin.
+- 🔐 **Steam ile Giriş:** Steam OpenID 2.0 desteği.
+- 🔊 **Ses Efektleri:** Oyun seçim sürecini destekleyen ses efektleri.
+- 🔎 **Oyun Filtreleme:** Oynanmamış, az oynanmış ve çok oynanmış oyunları filtreleyin.
+- 🚀 **Steam Entegrasyonu:** Oyunların Steam mağaza sayfalarına ve istemcisine erişin.
 
 ## 🛠️ Kullanılan Teknolojiler
 
-- **Backend:** Node.js, Express.js, Axios, CORS, Dotenv
-- **Frontend:** HTML5, CSS3, Vanilla JavaScript
-- **API:** Valve Steam Web API
+**Frontend**
+- HTML5
+- CSS3
+- JavaScript
 
----
-### 🤖 Yapay Zekâ Destekli Geliştirme
+**Backend**
+- Node.js
+- Express.js
+- Axios
 
-Bu proje, yapay zekâ destekli geliştirme araçlarından yararlanılarak hazırlanmıştır.
+**Entegrasyon**
+- Steam Web API
+- Steam OpenID 2.0
 
-**Kullanılan Yapay Zekâ Araçları:**
-- **Google Antigravity:** Kod geliştirme, düzenleme ve proje yönetimi süreçlerinde kullanılmıştır.
-- **Google Gemini:** Kodlama desteği, problem çözme ve hata ayıklama süreçlerinde yardımcı olmuştur.
+## 📸 Ekran Görüntüleri
 
-Yapay zekâ araçları geliştirme sürecini desteklemek amacıyla kullanılmış; proje üzerinde yönlendirme, inceleme ve değerlendirme süreçleri yürütülmüştür.
+Projenin ekran görüntüleri bu bölüme eklenecektir.
 
----
+## ⚙️ Kurulum ve Çalıştırma
 
-## 🚀 Kurulum ve Çalıştırma
+### Gereksinimler
+- Node.js
+- npm
+- Steam Web API anahtarı
 
-### 1. Depoyu klonlayın ve bağımlılıkları yükleyin
+### 1. Depoyu klonlayın
 
 ```bash
 git clone https://github.com/ilkeren/steam-game-picker.git
 cd steam-game-picker
+```
+
+### 2. Bağımlılıkları yükleyin
+
+```bash
 npm install
 ```
 
-### 2. Ortam değişkenlerini ayarlayın
+### 3. Ortam değişkenlerini yapılandırın
 
-Kök dizindeki `.env.example` dosyasını `.env` olarak kopyalayın.
-
-Windows:
-
-```powershell
-Copy-Item .env.example .env
-```
-
-macOS / Linux:
-
-```bash
-cp .env.example .env
-```
-
-Ardından `.env` dosyasını açıp kendi Steam Web API anahtarınızı girin:
+`.env.example` dosyasını `.env` olarak kopyalayın ve gerekli bilgileri girin.
 
 ```env
 PORT=3000
 STEAM_API_KEY=YOUR_STEAM_API_KEY
 ```
 
-**Güvenlik:** Gerçek API anahtarınızı README dosyalarına, kaynak koduna veya Git geçmişine eklemeyin. `.env` dosyası Git tarafından izlenmemelidir. Yalnızca örnek değer içeren `.env.example` dosyasını paylaşın.
+Steam API anahtarınızı resmi Steam sayfasından alabilirsiniz:
 
-Steam Web API anahtarınızı resmi Steam sayfasından yönetebilirsiniz: https://steamcommunity.com/dev/apikey
+https://steamcommunity.com/dev/apikey
 
-### 3. Sunucuyu başlatın
+### 4. Uygulamayı başlatın
 
 ```bash
 npm start
 ```
 
-Uygulamayı tarayıcıda açın: http://localhost:3000
+Tarayıcınızdan aşağıdaki adresi açın:
+
+http://localhost:3000
+
+## 🤖 Yapay Zekâ Destekli Geliştirme
+
+Bu proje, yapay zekâ destekli geliştirme araçlarından yararlanılarak hazırlanmıştır.
+
+**Kullanılan araçlar:**
+- **Google Antigravity:** Kod geliştirme ve düzenleme süreçlerinde kullanılmıştır.
+- **Google Gemini:** Kodlama desteği, problem çözme ve hata ayıklama süreçlerinde yardımcı olmuştur.
+
+Yapay zekâ araçları geliştirme sürecini desteklemek amacıyla kullanılmış; proje üzerinde yönlendirme, inceleme ve değerlendirme süreçleri yürütülmüştür.
+
+## 👨‍💻 Geliştirici
+
+**İlkeren Ceylanoğlu**
+
+[GitHub Profilim](https://github.com/ilkeren)
+
+---
+
+<p align="center">Geliştirilmeye ve öğrenmeye devam ediyorum. 🚀</p>
