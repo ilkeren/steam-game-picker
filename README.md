@@ -25,6 +25,17 @@ Steam kütüphanenizdeki oyunlar arasından ne oynayacağınıza karar veremiyor
 - **API:** Valve Steam Web API
 
 ---
+### 🤖 Yapay Zekâ Destekli Geliştirme
+
+Bu proje, yapay zekâ destekli geliştirme araçlarından yararlanılarak hazırlanmıştır.
+
+**Kullanılan Yapay Zekâ Araçları:**
+- **Google Antigravity:** Kod geliştirme, düzenleme ve proje yönetimi süreçlerinde kullanılmıştır.
+- **Google Gemini:** Kodlama desteği, problem çözme ve hata ayıklama süreçlerinde yardımcı olmuştur.
+
+Yapay zekâ araçları geliştirme sürecini desteklemek amacıyla kullanılmış; proje üzerinde yönlendirme, inceleme ve değerlendirme süreçleri yürütülmüştür.
+
+---
 
 ## 🚀 Kurulum ve Çalıştırma
 
