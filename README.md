@@ -32,7 +32,17 @@ Steam kütüphanenizdeki oyunlar arasından ne oynayacağınıza karar veremiyor
 
 ## 📸 Ekran Görüntüleri
 
-Projenin ekran görüntüleri bu bölüme eklenecektir.
+### Ana Sayfa
+![Ana Sayfa](screenshots/home.png)
+
+### Rastgele Oyun Seçimi
+![Oyun Seçimi](screenshots/game-picker.png)
+
+### Ortak Oyun Bulma
+![Ortak Oyunlar](screenshots/multiplayer.png)
+
+### Steam Mağazasından Oyun Seçimi
+![Oyun Kütüphanesi](screenshots/store.png)
 
 ## ⚙️ Kurulum ve Çalıştırma
 
